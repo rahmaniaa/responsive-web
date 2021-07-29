@@ -1,0 +1,4 @@
+
+# INI ADALAH PERTAMA KALI ENTI BELAJAR GIT
+
+#### ganbate!!!
