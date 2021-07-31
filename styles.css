@@ -221,7 +221,7 @@
         #ff6a00,
         #ee0979
     ); /* Chrome 10-25 */
-    background: -webkit-linear-gradient(
+    background: linear-gradient(
         to right,
         #ff6a00,
         #ee0979
