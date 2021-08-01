@@ -1,6 +1,6 @@
 const menu = document.querySelector('#mobile-menu')
 const menuLinks = document.querySelector('.navbar__menu')
-const navLogo = document.querrySelector('#navbar__logo')
+const navLogo = document.querySelector('#navbar__logo')
 
 // Display Mobile Menu
 const mobileMenu = () => {
@@ -12,10 +12,10 @@ menu.addEventListener('click', mobileMenu);
 
 //Show active menu when scrolling
 const highlightMenu = () => {
-    const elem = document.querrySelector('.highlight');
-    const homeMenu = document.querrySelector('#home-page');
-    const aboutMenu = document.querrySelector('#about-page');
-    const serviceMenu = document.querrySelector('#service-page');
+    const elem = document.querySelector('.highlight');
+    const homeMenu = document.querySelector('#home-page');
+    const aboutMenu = document.querySelector('#about-page');
+    const servicesMenu = document.querySelector('#service-page');
     let scrollPos = window.scrollY
     // console.log(scrollPos);
 
@@ -27,9 +27,10 @@ const highlightMenu = () => {
     }else if (window.innerWidth > 960 && scrollPos < 1400) {
         aboutMenu.classList.add('highlight');
         homeMenu.classList.remove('highlight');
-        serviceMenu.classList.remove('highlight');
+        servicesMenu.classList.remove('highlight');
+        return;
     }else if (window.innerWidth > 960 && scrollPos < 2345) {
-        serviceMenu.classList.add(highlight);
+        servicesMenu.classList.add('highlight');
         aboutMenu.classList.remove('highlight');
         return;
     }
@@ -43,13 +44,13 @@ window.addEventListener('scroll', highlightMenu);
 window.addEventListener('click', highlightMenu);
 
 // Close mobile Menu when clicking on menu item
-const hideMobilemenu = () => {
-    const hideMobilemenu = document.querySelector('.is-active')
-    if(window.innerWidth <= 768 && menubars) {
+const hideMobileMenu = () => {
+    const menuBars = document.querySelector('.is-active')
+    if(window.innerWidth <= 768 && menuBars) {
         menu.classList.toggle('is-active');
-        manuLinks.classList.remove('active');
+        menuLinks.classList.remove('active');
     }
 }
 
-menuLinks.addEventListener('click', hideMobilemenu);
-navLogo.addEventListener('click', hideMobilemenu);
+menuLinks.addEventListener('click', hideMobileMenu);
+navLogo.addEventListener('click', hideMobileMenu);
